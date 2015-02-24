@@ -56,7 +56,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
 // NO PIP, Both camera streams provide the same reseloution: Simple!
 #define D2_STREAM_WIDTH 640
-#define D2_STREAM_HEIGHT 360
+#define D2_STREAM_HEIGHT 352
 
 extern video_com_multisocket_config_t icc;
 extern const vp_api_stage_funcs_t vp_stages_export_funcs;

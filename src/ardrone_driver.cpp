@@ -499,7 +499,7 @@ void ARDroneDriver::PublishVideo()
     image_msg.step = D2_STREAM_WIDTH * 3;
     image_msg.data.resize(D2_STREAM_WIDTH * D2_STREAM_HEIGHT * 3);
     if (!realtime_video) vp_os_mutex_lock(&video_lock);
-    std::copy(buffer, buffer + (D2_STREAM_WIDTH * D2_STREAM_HEIGHT * 3), image_msg.data.begin());
+    std::copy(buffer + 4*3*D2_STREAM_WIDTH, buffer + 4*3*D2_STREAM_WIDTH + (D2_STREAM_WIDTH * D2_STREAM_HEIGHT * 3), image_msg.data.begin());
     if (!realtime_video) vp_os_mutex_unlock(&video_lock);
     // We only put the width and height in here.
 
